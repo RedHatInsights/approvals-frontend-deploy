@@ -4,8 +4,8 @@
   "src_tag": "",
   "src_branch": "master",
   "travis": {
-    "event_type": "push",
-    "build_number": "364",
-    "build_web_url": "https://travis-ci.org/ManageIQ/approval-ui/builds/549632447"
+    "event_type": "api",
+    "build_number": "365",
+    "build_web_url": "https://travis-ci.org/ManageIQ/approval-ui/builds/550321717"
   }
 }
