@@ -28,6 +28,9 @@
 .table-fix .pf-c-table__toggle {
   padding-top: 0; }
 
+.stages-modal {
+  padding-bottom: 80px; }
+
 .top-toolbar {
   background-color: #FFFFFF; }
   .top-toolbar .pf-c-breadcrumb__item .active {
