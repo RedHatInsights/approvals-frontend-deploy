@@ -31,6 +31,9 @@
 .stages-modal {
   padding-bottom: 80px; }
 
+.disabled-link {
+  pointer-events: none; }
+
 .top-toolbar {
   background-color: #FFFFFF; }
   .top-toolbar .pf-c-breadcrumb__item .active {
