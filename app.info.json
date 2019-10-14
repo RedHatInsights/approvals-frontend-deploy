@@ -1,11 +1,11 @@
 {
   "app_name": "approval",
-  "src_hash": "6ff31dcd9287bf78aa30abd544288931fcd92c62",
+  "src_hash": "c03288c5da8228098ee3960fe02c1fec771b8c3a",
   "src_tag": "",
   "src_branch": "qa-stable",
   "travis": {
     "event_type": "push",
-    "build_number": "485",
-    "build_web_url": "https://travis-ci.org/ManageIQ/approval-ui/builds/591698631"
+    "build_number": "497",
+    "build_web_url": "https://travis-ci.org/ManageIQ/approval-ui/builds/597800694"
   }
 }
