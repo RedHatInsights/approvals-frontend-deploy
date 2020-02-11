@@ -1,11 +1,11 @@
 {
   "app_name": "approval",
-  "src_hash": "86a2dfa8154ae0a82bdb501a65c733485df597c9",
+  "src_hash": "4031945aefbf8cbe35f91a2093afffbbe20df94c",
   "src_tag": "",
   "src_branch": "master",
   "travis": {
     "event_type": "push",
-    "build_number": "879",
-    "build_web_url": "https://travis-ci.org/RedHatInsights/approval-ui/builds/649004461"
+    "build_number": "885",
+    "build_web_url": "https://travis-ci.org/RedHatInsights/approval-ui/builds/649143719"
   }
 }
