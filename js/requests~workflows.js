@@ -274,7 +274,7 @@ var ApprovalBreadcrumbs = function ApprovalBreadcrumbs(_ref) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Breadcrumb_BreadcrumbItem_js__WEBPACK_IMPORTED_MODULE_4__["BreadcrumbItem"], {
       key: item.title,
       isActive: item.isActive
-    }, item.to && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__[/* NavLink */ "c"], {
+    }, item.to && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
       exact: true,
       to: item.to
     }, item.title) || item.title);
@@ -359,6 +359,97 @@ FilterToolbarItem.defaultProps = {
 
 /***/ }),
 
+/***/ "./src/presentational-components/shared/table-empty-state.js":
+/*!*******************************************************************!*\
+  !*** ./src/presentational-components/shared/table-empty-state.js ***!
+  \*******************************************************************/
+/*! exports provided: default, EmptyStatePrimaryAction */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export EmptyStatePrimaryAction */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Button/Button.js */ "./node_modules/@patternfly/react-core/dist/js/components/Button/Button.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyState.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyState.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/Text.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/Text.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components */ "./node_modules/@redhat-cloud-services/frontend-components/index.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TableEmptyState = function TableEmptyState(_ref) {
+  var title = _ref.title,
+      Icon = _ref.Icon,
+      description = _ref.description,
+      PrimaryAction = _ref.PrimaryAction,
+      renderDescription = _ref.renderDescription;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__["EmptyTable"], {
+    centered: true,
+    "aria-label": "No records"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__["EmptyState"], {
+    className: "pf-u-ml-auto pf-u-mr-auto"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__["EmptyStateIcon"], {
+    icon: Icon
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__["TextContent"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__["Text"], {
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__["TextVariants"].h1
+  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__["EmptyStateBody"], null, description, renderDescription()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__["EmptyStateSecondaryActions"], null, PrimaryAction && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PrimaryAction, null))));
+};
+
+TableEmptyState.defaultProps = {
+  renderDescription: function renderDescription() {
+    return null;
+  }
+};
+TableEmptyState.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  Icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any.isRequired,
+  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  PrimaryAction: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any,
+  renderDescription: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+/* harmony default export */ __webpack_exports__["a"] = (TableEmptyState);
+var EmptyStatePrimaryAction = function EmptyStatePrimaryAction(_ref2) {
+  var url = _ref2.url,
+      label = _ref2.label;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Link"], {
+    to: url
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    variant: "secondary"
+  }, label));
+};
+EmptyStatePrimaryAction.propTypes = {
+  url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+};
+
+/***/ }),
+
 /***/ "./src/presentational-components/shared/table-toolbar-view.js":
 /*!********************************************************************!*\
   !*** ./src/presentational-components/shared/table-toolbar-view.js ***!
@@ -436,7 +527,8 @@ var TableToolbarView = function TableToolbarView(_ref) {
       filterValue = _ref.filterValue,
       onFilterChange = _ref.onFilterChange,
       isLoading = _ref.isLoading,
-      onCollapse = _ref.onCollapse;
+      onCollapse = _ref.onCollapse,
+      renderEmptyState = _ref.renderEmptyState;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
@@ -512,7 +604,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     type: "content",
     "page-type": "tab-".concat(titlePlural),
     id: "tab-".concat(titlePlural)
-  }, routes(), renderToolbar(isLoading), isLoading ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__[/* Table */ "a"], {
+  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["Table"], {
     "aria-label": "".concat(titlePlural, " table"),
     onCollapse: onCollapseInternal,
     rows: rows,
@@ -520,7 +612,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     onSelect: isSelectable && selectRow,
     actionResolver: actionResolver,
     className: "table-fix"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__[/* TableHeader */ "c"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__[/* TableBody */ "b"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableBody"], null)));
 };
 TableToolbarView.propTypes = {
   isSelectable: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
@@ -542,7 +634,8 @@ TableToolbarView.propTypes = {
   filterValue: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
   onFilterChange: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
   isLoading: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
-  onCollapse: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
+  onCollapse: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+  renderEmptyState: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
 };
 TableToolbarView.defaultProps = {
   requests: [],
@@ -553,6 +646,9 @@ TableToolbarView.defaultProps = {
   },
   isSelectable: null,
   routes: function routes() {
+    return null;
+  },
+  renderEmptyState: function renderEmptyState() {
     return null;
   }
 };
@@ -709,7 +805,7 @@ AppTabs.propTypes = {
   }),
   tabItems: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array.isRequired
 };
-/* harmony default export */ __webpack_exports__["a"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__[/* withRouter */ "j"])(AppTabs));
+/* harmony default export */ __webpack_exports__["a"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(AppTabs));
 
 /***/ }),
 
