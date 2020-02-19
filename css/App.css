@@ -3633,6 +3633,9 @@ button.ins-c-tag-count {
   .top-toolbar .top-toolbar-title-description {
     word-break: break-word; }
 
+.global-primary-background {
+  background-color: #fff; }
+
 .notifications-portal {
   position: fixed;
   top: 0;

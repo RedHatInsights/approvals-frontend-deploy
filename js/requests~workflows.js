@@ -244,6 +244,36 @@ function getGraphqlInstance() {
 
 /***/ }),
 
+/***/ "./src/presentational-components/shared/bottom-pagination-container.js":
+/*!*****************************************************************************!*\
+  !*** ./src/presentational-components/shared/bottom-pagination-container.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var BottomPaginationContainer = function BottomPaginationContainer(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pf-u-p-lg pf-u-pt-md pf-u-pb-md global-primary-background pf-u-mt-auto"
+  }, children);
+};
+
+BottomPaginationContainer.propTypes = {
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node)])
+};
+/* harmony default export */ __webpack_exports__["a"] = (BottomPaginationContainer);
+
+/***/ }),
+
 /***/ "./src/presentational-components/shared/breadcrubms.js":
 /*!*************************************************************!*\
   !*** ./src/presentational-components/shared/breadcrubms.js ***!
@@ -481,16 +511,18 @@ EmptyStatePrimaryAction.propTypes = {
 /* harmony import */ var _patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @patternfly/react-table */ "./node_modules/@patternfly/react-table/dist/esm/index.js");
 /* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
 /* harmony import */ var _presentational_components_shared_filter_toolbar_item__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../presentational-components/shared/filter-toolbar-item */ "./src/presentational-components/shared/filter-toolbar-item.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/Section */ "./node_modules/@redhat-cloud-services/frontend-components/components/Section.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components */ "./node_modules/@redhat-cloud-services/frontend-components/index.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _loader_placeholders__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./loader-placeholders */ "./src/presentational-components/shared/loader-placeholders.js");
 /* harmony import */ var _smart_components_common_async_pagination__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../smart-components/common/async-pagination */ "./src/smart-components/common/async-pagination.js");
+/* harmony import */ var _presentational_components_shared_bottom_pagination_container__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../presentational-components/shared/bottom-pagination-container */ "./src/presentational-components/shared/bottom-pagination-container.js");
 
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -600,11 +632,11 @@ var TableToolbarView = function TableToolbarView(_ref) {
     })))))));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_12__["Section"], {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_12__["Section"], {
     type: "content",
     "page-type": "tab-".concat(titlePlural),
     id: "tab-".concat(titlePlural)
-  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["Table"], {
+  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["Table"], {
     "aria-label": "".concat(titlePlural, " table"),
     onCollapse: onCollapseInternal,
     rows: rows,
@@ -612,7 +644,11 @@ var TableToolbarView = function TableToolbarView(_ref) {
     onSelect: isSelectable && selectRow,
     actionResolver: actionResolver,
     className: "table-fix"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableBody"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_presentational_components_shared_bottom_pagination_container__WEBPACK_IMPORTED_MODULE_15__[/* default */ "a"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_smart_components_common_async_pagination__WEBPACK_IMPORTED_MODULE_14__[/* default */ "a"], {
+    dropDirection: "up",
+    meta: pagination,
+    apiRequest: fetchData
+  }))));
 };
 TableToolbarView.propTypes = {
   isSelectable: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
