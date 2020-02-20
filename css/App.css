@@ -3478,6 +3478,9 @@ button:focus {
   .ins-c-conditional-filter .ins-c-conditional-filter__group .pf-c-dropdown__toggle-text > svg {
     margin-right: var(--pf-global--spacer--xs); }
 
+.ins-c-conditional-filter .ins-c-conditional-filter__group.ins-c-conditional-filter__no-label .pf-c-dropdown__toggle-text {
+  width: auto; }
+
 .ins-c-conditional-filter input.ins-c-conditional-filter[type="text"] {
   padding-right: 35px;
   padding-right: 2.1875rem;
@@ -3555,10 +3558,6 @@ button.ins-c-tag-count {
         flex: 1; }
     .ins-c-primary-toolbar .ins-m-actions--empty {
       display: block; } }
-
-@media only screen and (max-width: 1795px) {
-  .ins-c-primary-toolbar .pf-c-data-toolbar__item {
-    padding-bottom: var(--pf-global--spacer--sm); } }
 
 .ins-c-inventory__culling-warning {
   color: var(--pf-global--warning-color--100); }
