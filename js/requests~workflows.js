@@ -1,246 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["requests~workflows"],{
 
-/***/ "./src/helpers/shared/helpers.js":
-/*!***************************************!*\
-  !*** ./src/helpers/shared/helpers.js ***!
-  \***************************************/
-/*! exports provided: scrollToTop, getCurrentPage, getNewPage, isRequestStateActive, timeAgo */
-/*! exports used: isRequestStateActive, scrollToTop, timeAgo */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/App.scss":
+/*!**********************!*\
+  !*** ./src/App.scss ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return scrollToTop; });
-/* unused harmony export getCurrentPage */
-/* unused harmony export getNewPage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isRequestStateActive; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return timeAgo; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_DateFormat__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/DateFormat */ "./node_modules/@redhat-cloud-services/frontend-components/components/DateFormat.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_DateFormat__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_DateFormat__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var activeStates = ['notified'];
-var scrollToTop = function scrollToTop() {
-  return document.getElementById('root').scrollTo({
-    behavior: 'smooth',
-    top: 0,
-    left: 0
-  });
-};
-var getCurrentPage = function getCurrentPage() {
-  var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  return Math.floor(offset / limit) + 1;
-};
-var getNewPage = function getNewPage() {
-  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  var offset = arguments.length > 1 ? arguments[1] : undefined;
-  return (page - 1) * offset;
-};
-var isRequestStateActive = function isRequestStateActive(state) {
-  return activeStates.includes(state);
-};
-var timeAgo = function timeAgo(date) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    key: date
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components_components_DateFormat__WEBPACK_IMPORTED_MODULE_1__["DateFormat"], {
-    date: date,
-    type: "relative"
-  }));
-};
-
-/***/ }),
-
-/***/ "./src/helpers/shared/pagination.js":
-/*!******************************************!*\
-  !*** ./src/helpers/shared/pagination.js ***!
-  \******************************************/
-/*! exports provided: defaultSettings, getCurrentPage, getNewPage */
-/*! exports used: defaultSettings, getCurrentPage, getNewPage */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return defaultSettings; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCurrentPage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getNewPage; });
-var defaultSettings = {
-  limit: 50,
-  offset: 0,
-  itemCount: 1,
-  numberOfItems: 50
-};
-var getCurrentPage = function getCurrentPage() {
-  var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  return Math.floor(offset / limit) + 1;
-};
-var getNewPage = function getNewPage() {
-  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  var offset = arguments.length > 1 ? arguments[1] : undefined;
-  return (page - 1) * offset;
-};
-
-/***/ }),
-
-/***/ "./src/helpers/shared/user-login.js":
-/*!******************************************!*\
-  !*** ./src/helpers/shared/user-login.js ***!
-  \******************************************/
-/*! exports provided: getRequestApi, getTemplateApi, getWorkflowApi, getActionApi, getRbacGroupApi, getAxiosInstance, getGraphqlInstance */
-/*! exports used: getActionApi, getAxiosInstance, getGraphqlInstance, getRbacGroupApi, getRequestApi, getTemplateApi, getWorkflowApi */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getRequestApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getTemplateApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getWorkflowApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getActionApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getRbacGroupApi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getAxiosInstance; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getGraphqlInstance; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utilities_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/constants */ "./src/utilities/constants.js");
-/* harmony import */ var _redhat_cloud_services_rbac_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @redhat-cloud-services/rbac-client */ "./node_modules/@redhat-cloud-services/rbac-client/dist/index.js");
-/* harmony import */ var _redhat_cloud_services_rbac_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_rbac_client__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @redhat-cloud-services/approval-client */ "./node_modules/@redhat-cloud-services/approval-client/dist/index.js");
-/* harmony import */ var _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__);
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-
-
-
-
-var axiosInstance = axios__WEBPACK_IMPORTED_MODULE_3___default.a.create();
-
-var resolveInterceptor = function resolveInterceptor(response) {
-  return response.data || response;
-};
-
-var errorInterceptor = function errorInterceptor() {
-  var error = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  throw _objectSpread({}, error.response);
-}; // check identity before each request. If the token is expired it will log out user
-
-
-axiosInstance.interceptors.request.use(
-/*#__PURE__*/
-function () {
-  var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(config) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return window.insights.chrome.auth.getUser();
-
-          case 2:
-            return _context.abrupt("return", config);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}());
-axiosInstance.interceptors.response.use(resolveInterceptor);
-axiosInstance.interceptors.response.use(null, errorInterceptor); // Approval Apis
-
-var workflowApi = new _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__["WorkflowApi"](undefined, _utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], axiosInstance);
-var actionApi = new _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__["ActionApi"](undefined, _utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], axiosInstance);
-var requestApi = new _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__["RequestApi"](undefined, _utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], axiosInstance);
-var templateApi = new _redhat_cloud_services_approval_client__WEBPACK_IMPORTED_MODULE_6__["TemplateApi"](undefined, _utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], axiosInstance);
-var rbacGroupApi = new _redhat_cloud_services_rbac_client__WEBPACK_IMPORTED_MODULE_5__["GroupApi"](undefined, _utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* RBAC_API_BASE */ "b"], axiosInstance); // Approval APIs
-
-function getRequestApi() {
-  return requestApi;
-}
-function getTemplateApi() {
-  return templateApi;
-}
-function getWorkflowApi() {
-  return workflowApi;
-}
-function getActionApi() {
-  return actionApi;
-}
-function getRbacGroupApi() {
-  return rbacGroupApi;
-}
-function getAxiosInstance() {
-  return axiosInstance;
-}
-var grapqlInstance = axios__WEBPACK_IMPORTED_MODULE_3___default.a.create();
-grapqlInstance.interceptors.request.use(
-/*#__PURE__*/
-function () {
-  var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(config) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return window.insights.chrome.auth.getUser();
-
-          case 2:
-            return _context2.abrupt("return", config);
-
-          case 3:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-
-  return function (_x2) {
-    return _ref2.apply(this, arguments);
-  };
-}());
-/**
- * Graphql does not return error response when the qery fails.
- * Instead it returns 200 response with error object.
- * We catch it and throw it to trigger notification middleware
- */
-
-grapqlInstance.interceptors.response.use(function (_ref3) {
-  var data = _ref3.data;
-
-  if (data.errors) {
-    throw {
-      message: data.errors[0].errorType,
-      data: data.errors[0].message
-    };
-  }
-
-  return data;
-});
-function getGraphqlInstance() {
-  return grapqlInstance;
-}
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -636,7 +403,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     type: "content",
     "page-type": "tab-".concat(titlePlural),
     id: "tab-".concat(titlePlural)
-  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["Table"], {
+  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_13__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, !isLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["Table"], {
     "aria-label": "".concat(titlePlural, " table"),
     onCollapse: onCollapseInternal,
     rows: rows,
@@ -964,22 +731,6 @@ AsyncPagination.defaultProps = {
   };
   return Object(awesome_debounce_promise__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(asyncFunction, debounceTime, options);
 });
-
-/***/ }),
-
-/***/ "./src/utilities/constants.js":
-/*!************************************!*\
-  !*** ./src/utilities/constants.js ***!
-  \************************************/
-/*! exports provided: APPROVAL_API_BASE, RBAC_API_BASE */
-/*! exports used: APPROVAL_API_BASE, RBAC_API_BASE */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APPROVAL_API_BASE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RBAC_API_BASE; });
-var APPROVAL_API_BASE = "".concat("/api", "/approval/v1.0");
-var RBAC_API_BASE = "".concat("/api", "/rbac/v1");
 
 /***/ })
 
