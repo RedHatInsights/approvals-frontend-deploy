@@ -342,7 +342,7 @@
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
-/*! no static exports found */function(e,t){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"==typeof window&&(n=window)}e.exports=n},"../../node_modules/webpack/buildin/harmony-module.js":
+/*! no static exports found */function(e,t){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(e){"object"==typeof window&&(n=window)}e.exports=n},"../../node_modules/webpack/buildin/harmony-module.js":
 /*!*******************************************!*\
   !*** (webpack)/buildin/harmony-module.js ***!
   \*******************************************/
