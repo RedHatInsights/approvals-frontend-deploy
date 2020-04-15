@@ -4653,6 +4653,7 @@ i.ins-battery {
   line-height: 0; }
   i.ins-battery svg {
     position: relative;
+    top: var(--pf-global--spacer--sm);
     position: relative;
     height: 28px;
     height: 1.75rem; }
