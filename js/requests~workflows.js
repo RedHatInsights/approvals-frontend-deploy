@@ -96,24 +96,27 @@ BottomPaginationContainer.propTypes = {
 
 var ApprovalBreadcrumbs = function ApprovalBreadcrumbs(_ref) {
   var breadcrumbs = _ref.breadcrumbs;
-  return breadcrumbs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Breadcrumb_Breadcrumb_js__WEBPACK_IMPORTED_MODULE_3__["Breadcrumb"], null, Object.values(breadcrumbs).map(function (item) {
+  return breadcrumbs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Breadcrumb_Breadcrumb_js__WEBPACK_IMPORTED_MODULE_3__["Breadcrumb"], null, breadcrumbs.map(function (_ref2, idx) {
+    var to = _ref2.to,
+        id = _ref2.id,
+        title = _ref2.title;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Breadcrumb_BreadcrumbItem_js__WEBPACK_IMPORTED_MODULE_4__["BreadcrumbItem"], {
-      key: item.title,
-      isActive: item.isActive
-    }, item.to && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+      key: title,
+      isActive: idx === breadcrumbs.length - 1,
+      id: id
+    }, to && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
       isActive: function isActive() {
         return false;
       },
       exact: true,
-      to: item.to
-    }, item.title) || item.title);
+      to: to
+    }, title) || title);
   })) : null;
 };
 
 ApprovalBreadcrumbs.propTypes = {
   breadcrumbs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
     title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-    isActive: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
     to: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
   }))
 };
