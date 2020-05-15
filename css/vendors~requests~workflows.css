@@ -3675,6 +3675,23 @@ Also for enableFlip, need to make arrow aware of parent x-placement attribute in
     width: auto;
     white-space: normal; } }
 
+.pf-l-stack {
+  --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
+  --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+@media screen and (max-width: 768px) {
+  .pf-l-stack {
+    --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--md--MarginBottom); } }
+
+.pf-l-stack__item.pf-m-fill {
+  flex-grow: 1; }
+
+.pf-l-stack.pf-m-gutter > *:not(:last-child) {
+  margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom); }
+
 .pf-c-form-control {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -3820,23 +3837,6 @@ select.pf-c-form-control.pf-m-success {
 
 .pf-c-form-control.pf-m-resize-horizontal {
   resize: horizontal; }
-
-.pf-l-stack {
-  --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
-  --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);
-  display: flex;
-  flex-direction: column;
-  height: 100%; }
-
-@media screen and (max-width: 768px) {
-  .pf-l-stack {
-    --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--md--MarginBottom); } }
-
-.pf-l-stack__item.pf-m-fill {
-  flex-grow: 1; }
-
-.pf-l-stack.pf-m-gutter > *:not(:last-child) {
-  margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom); }
 
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter);
