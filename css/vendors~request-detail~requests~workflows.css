@@ -1780,24 +1780,6 @@ Also for enableFlip, need to make arrow aware of parent x-placement attribute in
 .pf-c-inline-edit__label.pf-m-bold {
   font-weight: var(--pf-c-inline-edit__label--m-bold--FontWeight); }
 
-.pf-l-split {
-  --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
-  --pf-l-split--m-gutter--md--MarginRight: var(--pf-global--gutter--md);
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0;
-  margin: 0; }
-
-@media screen and (max-width: 768px) {
-  .pf-l-split {
-    --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--md--MarginRight); } }
-
-.pf-l-split__item.pf-m-fill {
-  flex-grow: 1; }
-
-.pf-l-split.pf-m-gutter > *:not(:last-child) {
-  margin-right: var(--pf-l-split--m-gutter--MarginRight); }
-
 .pf-c-table[class*="pf-m-grid"] {
   --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
@@ -2783,6 +2765,24 @@ Also for enableFlip, need to make arrow aware of parent x-placement attribute in
 
 .pf-c-backdrop__open {
   overflow: hidden; }
+
+.pf-l-split {
+  --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
+  --pf-l-split--m-gutter--md--MarginRight: var(--pf-global--gutter--md);
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0; }
+
+@media screen and (max-width: 768px) {
+  .pf-l-split {
+    --pf-l-split--m-gutter--MarginRight: var(--pf-l-split--m-gutter--md--MarginRight); } }
+
+.pf-l-split__item.pf-m-fill {
+  flex-grow: 1; }
+
+.pf-l-split.pf-m-gutter > *:not(:last-child) {
+  margin-right: var(--pf-l-split--m-gutter--MarginRight); }
 
 .pf-c-modal-box {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
