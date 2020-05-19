@@ -308,7 +308,9 @@ var TableToolbarView = function TableToolbarView(_ref) {
       onFilterChange = _ref.onFilterChange,
       isLoading = _ref.isLoading,
       onCollapse = _ref.onCollapse,
-      renderEmptyState = _ref.renderEmptyState;
+      renderEmptyState = _ref.renderEmptyState,
+      sortBy = _ref.sortBy,
+      onSort = _ref.onSort;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
@@ -391,7 +393,9 @@ var TableToolbarView = function TableToolbarView(_ref) {
     cells: columns,
     onSelect: isSelectable && selectRow,
     actionResolver: actionResolver,
-    className: "table-fix"
+    className: "table-fix",
+    sortBy: sortBy,
+    onSort: onSort
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_9__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_presentational_components_shared_bottom_pagination_container__WEBPACK_IMPORTED_MODULE_15__[/* default */ "a"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_smart_components_common_async_pagination__WEBPACK_IMPORTED_MODULE_14__[/* default */ "a"], {
     dropDirection: "up",
     meta: pagination,
@@ -419,7 +423,9 @@ TableToolbarView.propTypes = {
   onFilterChange: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
   isLoading: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
   onCollapse: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-  renderEmptyState: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
+  renderEmptyState: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+  sortBy: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  onSort: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
 };
 TableToolbarView.defaultProps = {
   requests: [],
@@ -433,6 +439,9 @@ TableToolbarView.defaultProps = {
     return null;
   },
   renderEmptyState: function renderEmptyState() {
+    return null;
+  },
+  onSort: function onSort() {
     return null;
   }
 };
