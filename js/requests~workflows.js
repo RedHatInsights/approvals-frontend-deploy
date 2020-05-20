@@ -103,29 +103,32 @@ EmptyStatePrimaryAction.propTypes = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TableToolbarView; });
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _patternfly_react_table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-table */ "./node_modules/@patternfly/react-table/dist/esm/index.js");
-/* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
-/* harmony import */ var _loader_placeholders__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./loader-placeholders */ "./src/presentational-components/shared/loader-placeholders.js");
-/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/Section */ "./node_modules/@redhat-cloud-services/frontend-components/components/Section.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/PrimaryToolbar */ "./node_modules/@redhat-cloud-services/frontend-components/components/PrimaryToolbar.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-table */ "./node_modules/@patternfly/react-table/dist/esm/index.js");
+/* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
+/* harmony import */ var _loader_placeholders__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./loader-placeholders */ "./src/presentational-components/shared/loader-placeholders.js");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/Section */ "./node_modules/@redhat-cloud-services/frontend-components/components/Section.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/PrimaryToolbar */ "./node_modules/@redhat-cloud-services/frontend-components/components/PrimaryToolbar.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__);
+
 
 
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -160,15 +163,17 @@ var TableToolbarView = function TableToolbarView(_ref) {
       onCollapse = _ref.onCollapse,
       renderEmptyState = _ref.renderEmptyState,
       sortBy = _ref.sortBy,
-      onSort = _ref.onSort;
-  var intl = Object(react_intl__WEBPACK_IMPORTED_MODULE_8__[/* useIntl */ "c"])();
+      onSort = _ref.onSort,
+      activeFiltersConfig = _ref.activeFiltersConfig,
+      filterConfig = _ref.filterConfig;
+  var intl = Object(react_intl__WEBPACK_IMPORTED_MODULE_9__[/* useIntl */ "c"])();
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])([]),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2___default()(_useState, 2),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
+      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3___default()(_useState, 2),
       rows = _useState2[0],
       setRows = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     setRows(createRows(data));
   }, [data]);
 
@@ -215,11 +220,11 @@ var TableToolbarView = function TableToolbarView(_ref) {
 
   var paginationConfig = {
     itemCount: pagination.count,
-    page: Object(_helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_6__[/* getCurrentPage */ "b"])(pagination.limit, pagination.offset),
+    page: Object(_helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_7__[/* getCurrentPage */ "b"])(pagination.limit, pagination.offset),
     perPage: pagination.limit,
     onSetPage: function onSetPage(_e, page) {
       return fetchData(_objectSpread({}, pagination, {
-        offset: Object(_helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_6__[/* getNewPage */ "c"])(page, pagination.limit)
+        offset: Object(_helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_7__[/* getNewPage */ "c"])(page, pagination.limit)
       }));
     },
     onPerPageSelect: function onPerPageSelect(_e, size) {
@@ -231,7 +236,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
   };
 
   var renderToolbar = function renderToolbar() {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_10__["PrimaryToolbar"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
       className: "pf-u-p-lg ins__approval__primary_toolbar",
       pagination: paginationConfig
     }, toolbarButtons && {
@@ -246,6 +251,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
             defaultMessage: 'Name'
           }),
           filterValues: {
+            id: 'filter-by-name',
             placeholder: intl.formatMessage({
               id: 'filter-by-name',
               defaultMessage: 'Filter by {title}'
@@ -263,16 +269,17 @@ var TableToolbarView = function TableToolbarView(_ref) {
             },
             value: filterValue
           }
-        }]
-      }
+        }].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(filterConfig))
+      },
+      activeFiltersConfig: activeFiltersConfig
     }));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_9__["Section"], {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__["Section"], {
     type: "content",
     "page-type": "tab-".concat(titlePlural),
     id: "tab-".concat(titlePlural)
-  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_7__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3__["Fragment"], null, !isLoading && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_5__["Table"], {
+  }, routes(), renderToolbar(isLoading), isLoading && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_loader_placeholders__WEBPACK_IMPORTED_MODULE_8__[/* DataListLoader */ "b"], null), !isLoading && rows.length === 0 ? renderEmptyState() : react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4__["Fragment"], null, !isLoading && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["Table"], {
     "aria-label": "".concat(titlePlural, " table"),
     onCollapse: onCollapseInternal,
     rows: rows,
@@ -282,7 +289,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     className: "table-fix",
     sortBy: sortBy,
     onSort: onSort
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_5__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_5__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_10__["PrimaryToolbar"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], {
     className: "pf-u-pl-lg pf-u-pr-lg ins__approval__primary_toolbar",
     pagination: _objectSpread({}, paginationConfig, {
       dropDirection: 'up',
@@ -292,34 +299,36 @@ var TableToolbarView = function TableToolbarView(_ref) {
   })));
 };
 TableToolbarView.propTypes = {
-  isSelectable: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  createRows: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func.isRequired,
-  columns: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.array.isRequired,
-  toolbarButtons: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  fetchData: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func.isRequired,
-  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.array,
-  pagination: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
-    limit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
-    offset: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
-    count: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
+  isSelectable: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool,
+  createRows: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func.isRequired,
+  columns: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array.isRequired,
+  toolbarButtons: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  fetchData: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func.isRequired,
+  data: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array,
+  pagination: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.shape({
+    limit: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.number,
+    offset: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.number,
+    count: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.number
   }),
-  titlePlural: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  titleSingular: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  routes: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  actionResolver: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  setCheckedItems: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  filterValue: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  onFilterChange: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  isLoading: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  onCollapse: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  renderEmptyState: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  sortBy: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  onSort: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func
+  titlePlural: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  titleSingular: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  routes: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  actionResolver: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  setCheckedItems: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  filterValue: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  onFilterChange: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  isLoading: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool,
+  onCollapse: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  renderEmptyState: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  sortBy: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  onSort: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  activeFiltersConfig: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  filterConfig: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array
 };
 TableToolbarView.defaultProps = {
   requests: [],
   isLoading: false,
-  pagination: _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_6__[/* defaultSettings */ "a"],
+  pagination: _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_7__[/* defaultSettings */ "a"],
   isSelectable: null,
   routes: function routes() {
     return null;
@@ -329,7 +338,8 @@ TableToolbarView.defaultProps = {
   },
   onSort: function onSort() {
     return null;
-  }
+  },
+  filterConfig: []
 };
 
 /***/ }),

@@ -124,15 +124,40 @@ var sortPropertiesMapper = function sortPropertiesMapper(property) {
   }[property] || property;
 };
 
+var filterQuery = function filterQuery(filterValue) {
+  var query = [];
+
+  if (filterValue.name) {
+    query.push("filter[name][contains_i]=".concat(filterValue.name));
+  }
+
+  if (filterValue.requester) {
+    query.push("filter[requester_name][contains_i]=".concat(filterValue.requester));
+  }
+
+  if (filterValue.status) {
+    filterValue.status.forEach(function (state) {
+      query.push("filter[state][eq][]=".concat(state));
+    });
+  }
+
+  if (filterValue.decision) {
+    filterValue.decision.forEach(function (dec) {
+      query.push("filter[decision][eq][]=".concat(dec));
+    });
+  }
+
+  return query.join('&');
+};
+
 function fetchRequests() {
-  var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var pagination = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _shared_pagination__WEBPACK_IMPORTED_MODULE_5__[/* defaultSettings */ "a"];
   var persona = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
   var sortBy = arguments.length > 3 ? arguments[3] : undefined;
-  var filterQuery = "filter[name][contains_i]=".concat(filter);
-  var paginationQuery = "&limit=".concat(pagination.limit, "&offset=").concat(pagination.offset);
+  var paginationQuery = "&limit=".concat(Math.max(pagination.limit, 10), "&offset=").concat(pagination.offset);
   var sortQuery = "&sort_by=".concat(sortPropertiesMapper(sortBy.property), ":").concat(sortBy.direction);
-  var fetchUrl = "".concat(_utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], "/requests/?").concat(filterQuery).concat(paginationQuery).concat(sortQuery);
+  var fetchUrl = "".concat(_utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], "/requests/?").concat(filterQuery(filter)).concat(paginationQuery).concat(sortQuery);
   var fetchHeaders = persona ? {
     'x-rh-persona': persona
   } : undefined;
@@ -432,28 +457,31 @@ Pf4SelectWrapper.propTypes = {
 /*!**********************************************!*\
   !*** ./src/redux/actions/request-actions.js ***!
   \**********************************************/
-/*! exports provided: fetchRequests, fetchRequest, fetchRequestContent, createRequestAction, expandRequest, sortRequests */
-/*! exports used: createRequestAction, expandRequest, fetchRequest, fetchRequestContent, fetchRequests, sortRequests */
+/*! exports provided: fetchRequests, fetchRequest, fetchRequestContent, createRequestAction, expandRequest, sortRequests, setFilterValueRequests, clearFilterValueRequests */
+/*! exports used: clearFilterValueRequests, createRequestAction, expandRequest, fetchRequest, fetchRequestContent, fetchRequests, setFilterValueRequests, sortRequests */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return fetchRequests; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return fetchRequest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return fetchRequestContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createRequestAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return expandRequest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return sortRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return fetchRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return fetchRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return fetchRequestContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return createRequestAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return expandRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return sortRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return setFilterValueRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return clearFilterValueRequests; });
 /* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/redux/action-types.js");
 /* harmony import */ var _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../helpers/request/request-helper */ "./src/helpers/request/request-helper.js");
 /* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
 
 
 
-var fetchRequests = function fetchRequests(filter, persona, pagination) {
+var fetchRequests = function fetchRequests(persona, pagination) {
   return function (dispatch, getState) {
     var _getState$requestRedu = getState().requestReducer,
         sortBy = _getState$requestRedu.sortBy,
-        requests = _getState$requestRedu.requests;
+        requests = _getState$requestRedu.requests,
+        filterValue = _getState$requestRedu.filterValue;
     var finalPagination = pagination || _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_2__[/* defaultSettings */ "a"];
 
     if (!pagination && requests) {
@@ -467,26 +495,26 @@ var fetchRequests = function fetchRequests(filter, persona, pagination) {
     }
 
     return dispatch({
-      type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUESTS */ "h"],
-      payload: _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__[/* fetchRequests */ "d"](filter, finalPagination, persona, sortBy)
+      type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUESTS */ "i"],
+      payload: _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__[/* fetchRequests */ "d"](filterValue, finalPagination, persona, sortBy)
     });
   };
 };
 var fetchRequest = function fetchRequest(apiProps, persona) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUEST */ "g"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUEST */ "h"],
     payload: _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__[/* fetchRequestWithSubrequests */ "c"](apiProps, persona)
   };
 };
 var fetchRequestContent = function fetchRequestContent(apiProps, persona) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUEST_CONTENT */ "i"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* FETCH_REQUEST_CONTENT */ "j"],
     payload: _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__[/* fetchRequestContent */ "b"](apiProps, persona)
   };
 };
 var createRequestAction = function createRequestAction(actionName, requestId, actionIn) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* CREATE_REQUEST_ACTION */ "b"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* CREATE_REQUEST_ACTION */ "c"],
     payload: _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__[/* createRequestAction */ "a"](requestId, actionIn),
     meta: {
       notifications: {
@@ -506,14 +534,28 @@ var createRequestAction = function createRequestAction(actionName, requestId, ac
 };
 var expandRequest = function expandRequest(id) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* EXPAND_REQUEST */ "c"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* EXPAND_REQUEST */ "d"],
     payload: id
   };
 };
 var sortRequests = function sortRequests(sortBy) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SORT_REQUESTS */ "n"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SORT_REQUESTS */ "q"],
     payload: sortBy
+  };
+};
+var setFilterValueRequests = function setFilterValueRequests(filterValue, type) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SET_FILTER_REQUESTS */ "o"],
+    payload: {
+      filterValue: filterValue,
+      type: type
+    }
+  };
+};
+var clearFilterValueRequests = function clearFilterValueRequests() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* CLEAR_FILTER_REQUESTS */ "b"]
   };
 };
 
@@ -716,7 +758,7 @@ ActionModal.propTypes = {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return Object(redux__WEBPACK_IMPORTED_MODULE_7__[/* bindActionCreators */ "a"])({
     addNotification: _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_9__["addNotification"],
-    createRequestAction: _redux_actions_request_actions__WEBPACK_IMPORTED_MODULE_10__[/* createRequestAction */ "a"]
+    createRequestAction: _redux_actions_request_actions__WEBPACK_IMPORTED_MODULE_10__[/* createRequestAction */ "b"]
   }, dispatch);
 };
 
