@@ -45,32 +45,33 @@ var routes = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createRequestCommentSchema; });
-/* harmony import */ var _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer */ "./node_modules/@data-driven-forms/react-form-renderer/dist/index.js");
-/* harmony import */ var _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_component_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer/dist/cjs/component-types */ "./node_modules/@data-driven-forms/react-form-renderer/dist/cjs/component-types.js");
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_component_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer_dist_cjs_component_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_validator_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer/dist/cjs/validator-types */ "./node_modules/@data-driven-forms/react-form-renderer/dist/cjs/validator-types.js");
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_validator_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer_dist_cjs_validator_types__WEBPACK_IMPORTED_MODULE_2__);
 
 
-var schemaFields = function schemaFields(isDeny) {
-  return {
-    component: _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_0__["componentTypes"].TEXTAREA_FIELD,
-    name: 'comments',
-    type: 'text',
-    isRequired: isDeny,
-    label: isDeny ? 'Reason' : 'Comment'
-  };
-};
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
 
 var createRequestCommentSchema = function createRequestCommentSchema() {
   var isDeny = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-  var schema = schemaFields(isDeny);
-
-  if (isDeny) {
-    schema.validate = [{
-      type: _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_0__["validatorTypes"].REQUIRED
-    }];
-  }
-
   return {
-    fields: [schema]
+    fields: [_objectSpread({
+      component: _data_driven_forms_react_form_renderer_dist_cjs_component_types__WEBPACK_IMPORTED_MODULE_1___default.a.TEXTAREA,
+      name: 'comments',
+      isRequired: isDeny,
+      label: isDeny ? 'Reason' : 'Comment'
+    }, isDeny && {
+      validate: [{
+        type: _data_driven_forms_react_form_renderer_dist_cjs_validator_types__WEBPACK_IMPORTED_MODULE_2___default.a.REQUIRED
+      }]
+    })]
   };
 };
 
@@ -322,137 +323,6 @@ function _createRequestAction() {
 
 /***/ }),
 
-/***/ "./src/presentational-components/shared/pf4-select-wrapper.js":
-/*!********************************************************************!*\
-  !*** ./src/presentational-components/shared/pf4-select-wrapper.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_FormSelect_FormSelect_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/FormSelect/FormSelect.js */ "./node_modules/@patternfly/react-core/dist/js/components/FormSelect/FormSelect.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_FormSelect_FormSelect_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_FormSelect_FormSelect_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_FormSelect_FormSelectOption_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/FormSelect/FormSelectOption.js */ "./node_modules/@patternfly/react-core/dist/js/components/FormSelect/FormSelectOption.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_FormSelect_FormSelectOption_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_FormSelect_FormSelectOption_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Form_FormGroup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Form/FormGroup.js */ "./node_modules/@patternfly/react-core/dist/js/components/Form/FormGroup.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Form_FormGroup_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Form_FormGroup_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/Text.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/Text.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_9__);
-
-
-
-
-
-
-
-
-
-
-
-
-var createOptions = function createOptions(options, inputValue, isRequired) {
-  if (inputValue && isRequired) {
-    return options;
-  }
-
-  var selectOptions = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default()(options);
-
-  return selectOptions.find(function (_ref) {
-    var value = _ref.value;
-    return value === undefined;
-  }) ? _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default()(selectOptions) : [{
-    label: isRequired ? 'Please choose' : 'None'
-  }].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default()(selectOptions));
-};
-
-var Select = function Select(_ref2) {
-  var input = _ref2.input,
-      options = _ref2.options,
-      isReadOnly = _ref2.isReadOnly,
-      isDisabled = _ref2.isDisabled,
-      FieldProvider = _ref2.FieldProvider,
-      isRequired = _ref2.isRequired,
-      rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_ref2, ["input", "options", "isReadOnly", "isDisabled", "FieldProvider", "isRequired"]);
-
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_core_dist_js_components_FormSelect_FormSelect_js__WEBPACK_IMPORTED_MODULE_5__["FormSelect"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, input, rest, {
-    isDisabled: isDisabled || isReadOnly
-  }), createOptions(options, input.value, isRequired).map(function (props) {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_core_dist_js_components_FormSelect_FormSelectOption_js__WEBPACK_IMPORTED_MODULE_6__["FormSelectOption"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-      key: props.value || props.label
-    }, props, {
-      label: props.label.toString()
-    })) // eslint-disable-line react/prop-types
-    ;
-  }));
-};
-
-Select.propTypes = {
-  input: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object.isRequired,
-  options: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
-    value: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.any,
-    label: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired
-  })).isRequired,
-  isReadOnly: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  isDisabled: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  isRequired: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  FieldProvider: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.any
-};
-
-var Pf4SelectWrapper = function Pf4SelectWrapper(_ref3) {
-  var componentType = _ref3.componentType,
-      label = _ref3.label,
-      isRequired = _ref3.isRequired,
-      helperText = _ref3.helperText,
-      meta = _ref3.meta,
-      description = _ref3.description,
-      hideLabel = _ref3.hideLabel,
-      rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_ref3, ["componentType", "label", "isRequired", "helperText", "meta", "description", "hideLabel"]);
-
-  var error = meta.error,
-      touched = meta.touched;
-  var showError = touched && error;
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_core_dist_js_components_Form_FormGroup_js__WEBPACK_IMPORTED_MODULE_7__["FormGroup"], {
-    isRequired: isRequired,
-    label: !hideLabel && label,
-    fieldId: rest.id,
-    isValid: !showError,
-    helperText: helperText,
-    helperTextInvalid: meta.error
-  }, description && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__["TextContent"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_9__["Text"], {
-    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_9__["TextVariants"].small
-  }, description)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Select, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-    label: label,
-    isValid: !showError,
-    isRequired: isRequired
-  }, rest)));
-};
-
-Pf4SelectWrapper.propTypes = {
-  componentType: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  label: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  isRequired: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  helperText: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  meta: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  description: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  hideLabel: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["a"] = (Pf4SelectWrapper);
-
-/***/ }),
-
 /***/ "./src/redux/actions/request-actions.js":
 /*!**********************************************!*\
   !*** ./src/redux/actions/request-actions.js ***!
@@ -572,26 +442,29 @@ var clearFilterValueRequests = function clearFilterValueRequests() {
 "use strict";
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer */ "./node_modules/@data-driven-forms/react-form-renderer/dist/index.js");
-/* harmony import */ var _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _data_driven_forms_pf4_component_mapper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @data-driven-forms/pf4-component-mapper */ "./node_modules/@data-driven-forms/pf4-component-mapper/dist/index.js");
-/* harmony import */ var _data_driven_forms_pf4_component_mapper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_pf4_component_mapper__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _presentational_components_shared_pf4_select_wrapper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../presentational-components/shared/pf4-select-wrapper */ "./src/presentational-components/shared/pf4-select-wrapper.js");
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_form_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer/dist/cjs/form-renderer */ "./node_modules/@data-driven-forms/react-form-renderer/dist/cjs/form-renderer.js");
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_form_renderer__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer_dist_cjs_form_renderer__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _data_driven_forms_pf4_component_mapper_dist_cjs_component_mapper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @data-driven-forms/pf4-component-mapper/dist/cjs/component-mapper */ "./node_modules/@data-driven-forms/pf4-component-mapper/dist/cjs/component-mapper.js");
+/* harmony import */ var _data_driven_forms_pf4_component_mapper_dist_cjs_component_mapper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_pf4_component_mapper_dist_cjs_component_mapper__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _data_driven_forms_pf4_component_mapper_dist_cjs_form_template__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @data-driven-forms/pf4-component-mapper/dist/cjs/form-template */ "./node_modules/@data-driven-forms/pf4-component-mapper/dist/cjs/form-template.js");
+/* harmony import */ var _data_driven_forms_pf4_component_mapper_dist_cjs_form_template__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_pf4_component_mapper_dist_cjs_form_template__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _workflow_add_groups_summary_content__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../workflow/add-groups/summary-content */ "./src/smart-components/workflow/add-groups/summary-content.js");
 
 
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -606,27 +479,28 @@ var buttonPositioning = {
   }
 };
 
+var componentMapperExtended = _objectSpread({}, _data_driven_forms_pf4_component_mapper_dist_cjs_component_mapper__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  summary: _workflow_add_groups_summary_content__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"]
+});
+
 var FormRenderer = function FormRenderer(_ref) {
-  var componentMapper = _ref.componentMapper,
-      formContainer = _ref.formContainer,
-      rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default()(_ref, ["componentMapper", "formContainer"]);
+  var formContainer = _ref.formContainer,
+      rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_ref, ["formContainer"]);
 
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: buttonPositioning[formContainer].buttonClassName
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_5___default.a, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-    formFieldsMapper: _objectSpread({}, _data_driven_forms_pf4_component_mapper__WEBPACK_IMPORTED_MODULE_6__["formFieldsMapper"], _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()({
-      componentMapper: componentMapper
-    }, _data_driven_forms_react_form_renderer__WEBPACK_IMPORTED_MODULE_5__["componentTypes"].SELECT, _presentational_components_shared_pf4_select_wrapper__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"])),
-    layoutMapper: _data_driven_forms_pf4_component_mapper__WEBPACK_IMPORTED_MODULE_6__["layoutMapper"]
-  }, buttonPositioning[formContainer], rest)));
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_data_driven_forms_react_form_renderer_dist_cjs_form_renderer__WEBPACK_IMPORTED_MODULE_5___default.a, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+    componentMapper: componentMapperExtended,
+    FormTemplate: function FormTemplate(props) {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_data_driven_forms_pf4_component_mapper_dist_cjs_form_template__WEBPACK_IMPORTED_MODULE_7___default.a, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, buttonPositioning[formContainer]));
+    }
+  }, rest)));
 };
 
 FormRenderer.propTypes = {
-  componentMapper: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   formContainer: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOf(['default', 'modal'])
 };
 FormRenderer.defaultProps = {
-  componentMapper: {},
   formContainer: 'default'
 };
 /* harmony default export */ __webpack_exports__["a"] = (FormRenderer);
@@ -734,7 +608,6 @@ var ActionModal = function ActionModal(_ref) {
     onClose: onCancel
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_common_form_renderer__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
     schema: Object(_forms_request_comment_form_schema__WEBPACK_IMPORTED_MODULE_11__[/* createRequestCommentSchema */ "a"])(actionType === 'Deny'),
-    schemaType: "default",
     onSubmit: onSubmit,
     onCancel: onCancel,
     formContainer: "modal"
@@ -763,6 +636,108 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["connect"])(null, mapDispatchToProps)(ActionModal));
+
+/***/ }),
+
+/***/ "./src/smart-components/workflow/add-groups/summary-content.js":
+/*!*********************************************************************!*\
+  !*** ./src/smart-components/workflow/add-groups/summary-content.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @patternfly/react-core/dist/js/layouts/Grid/Grid.js */ "./node_modules/@patternfly/react-core/dist/js/layouts/Grid/Grid.js");
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @patternfly/react-core/dist/js/layouts/Grid/GridItem.js */ "./node_modules/@patternfly/react-core/dist/js/layouts/Grid/GridItem.js");
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @patternfly/react-core/dist/js/layouts/Stack/Stack.js */ "./node_modules/@patternfly/react-core/dist/js/layouts/Stack/Stack.js");
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_layouts_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @patternfly/react-core/dist/js/layouts/Stack/StackItem.js */ "./node_modules/@patternfly/react-core/dist/js/layouts/Stack/StackItem.js");
+/* harmony import */ var _patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/Text.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/Text.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Title_Title_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Title/Title.js */ "./node_modules/@patternfly/react-core/dist/js/components/Title/Title.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Title_Title_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Title_Title_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_use_form_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @data-driven-forms/react-form-renderer/dist/cjs/use-form-api */ "./node_modules/@data-driven-forms/react-form-renderer/dist/cjs/use-form-api.js");
+/* harmony import */ var _data_driven_forms_react_form_renderer_dist_cjs_use_form_api__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_data_driven_forms_react_form_renderer_dist_cjs_use_form_api__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+
+
+var SummaryContent = function SummaryContent() {
+  var _useFormApi = _data_driven_forms_react_form_renderer_dist_cjs_use_form_api__WEBPACK_IMPORTED_MODULE_8___default()(),
+      getState = _useFormApi.getState;
+
+  var _getState$values = getState().values,
+      name = _getState$values.name,
+      description = _getState$values.description,
+      wfGroups = _getState$values.wfGroups;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_3__["Stack"], {
+    gutter: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__["StackItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Title_Title_js__WEBPACK_IMPORTED_MODULE_7__["Title"], {
+    size: "xl"
+  }, " Review ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__["StackItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_3__["Stack"], {
+    gutter: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__["StackItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_6__["TextContent"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+    className: "data-table-detail heading",
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].h5
+  }, "Review and confirm your inputs. If there is anything incorrect, click Back and revise."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Stack_StackItem_js__WEBPACK_IMPORTED_MODULE_4__["StackItem"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+    gutter: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+    span: 2
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+    className: "data-table-detail heading",
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].h5
+  }, "Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+    span: 10
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+    className: "data-table-detail content",
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].p
+  }, name))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+    gutter: "md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+    span: 2
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+    className: "data-table-detail heading",
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].h5
+  }, "Description")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+    span: 10
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+    className: "data-table-detail content",
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].p
+  }, description))), wfGroups && wfGroups.length > 0 && wfGroups.map(function (group, idx) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: group.value
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_Grid_js__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+      gutter: "md"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+      span: 2
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+      className: "data-table-detail heading",
+      component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].h5
+    }, idx === 0 ? 'Groups' : '')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_layouts_Grid_GridItem_js__WEBPACK_IMPORTED_MODULE_2__["GridItem"], {
+      span: 10
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["Text"], {
+      className: "data-table-detail content",
+      component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_5__["TextVariants"].p
+    }, group.label))));
+  }))))));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (SummaryContent);
 
 /***/ }),
 
