@@ -348,11 +348,12 @@ TableToolbarView.defaultProps = {
 /*!***************************************************!*\
   !*** ./src/smart-components/app-tabs/app-tabs.js ***!
   \***************************************************/
-/*! exports provided: default */
-/*! exports used: default */
+/*! exports provided: AppTabs */
+/*! exports used: AppTabs */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppTabs; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
@@ -367,18 +368,38 @@ TableToolbarView.defaultProps = {
 
 
 
-
+var approvalTabItems = [{
+  eventKey: 0,
+  title: 'Request queue',
+  name: '/requests'
+}, {
+  eventKey: 1,
+  title: 'All requests',
+  name: '/allrequests'
+}, {
+  eventKey: 2,
+  title: 'Approval processes',
+  name: '/workflows'
+}];
 var AppTabs = function AppTabs(_ref) {
-  var push = _ref.history.push,
-      pathname = _ref.location.pathname,
-      tabItems = _ref.tabItems;
+  var _ref$tabItems = _ref.tabItems,
+      tabItems = _ref$tabItems === void 0 ? approvalTabItems : _ref$tabItems;
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"])();
+
+  var _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useLocation"])(),
+      pathname = _useLocation.pathname,
+      search = _useLocation.search;
+
   var activeTab = tabItems.find(function (_ref2) {
     var name = _ref2.name;
     return pathname.includes(name);
   });
 
   var handleTabClick = function handleTabClick(_event, tabIndex) {
-    return push(tabItems[tabIndex].name);
+    return history.push({
+      pathname: tabItems[tabIndex].name,
+      search: search
+    });
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Tabs_Tabs_js__WEBPACK_IMPORTED_MODULE_3__["Tabs"], {
@@ -394,17 +415,9 @@ var AppTabs = function AppTabs(_ref) {
     });
   }));
 };
-
 AppTabs.propTypes = {
-  location: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
-    pathname: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
-  }),
-  history: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
-    push: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired
-  }),
-  tabItems: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array.isRequired
+  tabItems: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
 };
-/* harmony default export */ __webpack_exports__["a"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(AppTabs));
 
 /***/ }),
 

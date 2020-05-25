@@ -119,6 +119,7 @@ var graphqlInstance = Object(_shared_user_login__WEBPACK_IMPORTED_MODULE_3__[/* 
 
 var sortPropertiesMapper = function sortPropertiesMapper(property) {
   return {
+    'request-id': 'id',
     opened: 'created_at',
     requester: 'requester_name',
     status: 'state'
@@ -174,10 +175,10 @@ var requestTranscriptQuery = function requestTranscriptQuery(parent_id) {
 };
 
 var fetchRequestTranscript = function fetchRequestTranscript(requestId, persona) {
-  var fetchHeaders = persona && persona !== _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_APPROVER_PERSONA */ "a"] ? {
+  var fetchHeaders = persona && persona !== _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_APPROVER_PERSONA */ "b"] ? {
     'x-rh-persona': persona
   } : {
-    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "b"]
+    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "c"]
   };
   return graphqlInstance({
     method: 'post',
@@ -194,7 +195,7 @@ var fetchRequestTranscript = function fetchRequestTranscript(requestId, persona)
 var fetchRequestContent = function fetchRequestContent(id) {
   var fetchUrl = "".concat(_utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], "/requests/").concat(id, "/content");
   var fetchHeaders = {
-    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "b"]
+    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "c"]
   };
   return Object(_shared_user_login__WEBPACK_IMPORTED_MODULE_3__[/* getAxiosInstance */ "b"])()({
     method: 'get',
@@ -205,7 +206,7 @@ var fetchRequestContent = function fetchRequestContent(id) {
 var fetchRequestCapabilities = function fetchRequestCapabilities(id, isParent) {
   var fetchUrl = "".concat(_utilities_constants__WEBPACK_IMPORTED_MODULE_4__[/* APPROVAL_API_BASE */ "a"], "/requests/").concat(id).concat(isParent ? '/requests' : '');
   var fetchHeaders = {
-    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "b"]
+    'x-rh-persona': _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_REQUESTER_PERSONA */ "c"]
   };
   return Object(_shared_user_login__WEBPACK_IMPORTED_MODULE_3__[/* getAxiosInstance */ "b"])()({
     method: 'get',
@@ -240,7 +241,7 @@ function _fetchRequestWithSubrequests() {
             return _context.abrupt("return", {});
 
           case 5:
-            if (!(persona === _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_APPROVER_PERSONA */ "a"])) {
+            if (!(persona === _shared_helpers__WEBPACK_IMPORTED_MODULE_6__[/* APPROVAL_APPROVER_PERSONA */ "b"])) {
               _context.next = 17;
               break;
             }
