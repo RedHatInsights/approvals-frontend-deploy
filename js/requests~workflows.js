@@ -4,35 +4,29 @@
 /*!*******************************************************************!*\
   !*** ./src/presentational-components/shared/table-empty-state.js ***!
   \*******************************************************************/
-/*! exports provided: default, EmptyStatePrimaryAction */
+/*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export EmptyStatePrimaryAction */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Button/Button.js */ "./node_modules/@patternfly/react-core/dist/js/components/Button/Button.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyState.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyState.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/Text.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/Text.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
-/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components */ "./node_modules/@redhat-cloud-services/frontend-components/index.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
-
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyState.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyState.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateIcon.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateBody.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js */ "./node_modules/@patternfly/react-core/dist/js/components/EmptyState/EmptyStateSecondaryActions.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/Text.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/Text.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
+/* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components */ "./node_modules/@redhat-cloud-services/frontend-components/index.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -50,23 +44,18 @@ var TableEmptyState = function TableEmptyState(_ref) {
       description = _ref.description,
       PrimaryAction = _ref.PrimaryAction,
       renderDescription = _ref.renderDescription;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_9__["EmptyTable"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__["EmptyTable"], {
     centered: true,
     "aria-label": "No records"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_3__["EmptyState"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_2__["EmptyState"], {
     className: "pf-u-ml-auto pf-u-mr-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_4__["EmptyStateIcon"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateIcon_js__WEBPACK_IMPORTED_MODULE_3__["EmptyStateIcon"], {
     icon: Icon
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_8__["TextContent"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__["Text"], {
-    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_7__["TextVariants"].h1
-  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_5__["EmptyStateBody"], null, description, renderDescription()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_6__["EmptyStateSecondaryActions"], null, PrimaryAction && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PrimaryAction, null))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7__["TextContent"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+    component: _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6__["TextVariants"].h1
+  }, title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateBody_js__WEBPACK_IMPORTED_MODULE_4__["EmptyStateBody"], null, description, renderDescription && renderDescription()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyStateSecondaryActions_js__WEBPACK_IMPORTED_MODULE_5__["EmptyStateSecondaryActions"], null, PrimaryAction && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PrimaryAction, null))));
 };
 
-TableEmptyState.defaultProps = {
-  renderDescription: function renderDescription() {
-    return null;
-  }
-};
 TableEmptyState.propTypes = {
   title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   Icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any.isRequired,
@@ -75,19 +64,6 @@ TableEmptyState.propTypes = {
   renderDescription: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["a"] = (TableEmptyState);
-var EmptyStatePrimaryAction = function EmptyStatePrimaryAction(_ref2) {
-  var url = _ref2.url,
-      label = _ref2.label;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Link"], {
-    to: url
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-    variant: "secondary"
-  }, label));
-};
-EmptyStatePrimaryAction.propTypes = {
-  url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
-};
 
 /***/ }),
 
@@ -185,37 +161,25 @@ var TableToolbarView = function TableToolbarView(_ref) {
     });
   };
 
-  var setSelected = function setSelected(data, id) {
-    var newData = data.map(function (row) {
-      return row.id === id ? _objectSpread({}, row, {
-        selected: !row.selected
+  var setSelected = function setSelected(_event, selected, index) {
+    var _ref2 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {},
+        id = _ref2.id;
+
+    var newData = rows.map(function (row) {
+      return row.id === id || index === -1 ? _objectSpread({}, row, {
+        selected: index === -1 ? selected : !row.selected
       }) : _objectSpread({}, row);
     });
     var checkedItems = newData.filter(function (item) {
       return item.id && item.selected;
     });
     setCheckedItems(checkedItems);
-    return newData;
+    return setRows(newData);
   };
 
-  var onCollapseInternal = function onCollapseInternal(_event, _index, _isOpen, _ref2) {
-    var id = _ref2.id;
-    return onCollapse ? onCollapse(id, setRows, setOpen) : setRows(function (rows) {
-      return setOpen(rows, id);
-    });
-  };
-
-  var selectRow = function selectRow(_event, selected, index) {
-    var _ref3 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {},
-        id = _ref3.id;
-
-    return index === -1 ? setRows(rows.map(function (row) {
-      return _objectSpread({}, row, {
-        selected: selected
-      });
-    })) : setRows(function (rows) {
-      return setSelected(rows, id);
-    });
+  var onCollapseInternal = function onCollapseInternal(_event, _index, _isOpen, _ref3) {
+    var id = _ref3.id;
+    return onCollapse ? onCollapse(id, setRows, setOpen) : setRows(setOpen(rows, id));
   };
 
   var paginationConfig = {
@@ -284,7 +248,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     onCollapse: onCollapseInternal,
     rows: rows,
     cells: columns,
-    onSelect: isSelectable && selectRow,
+    onSelect: isSelectable && setSelected,
     actionResolver: actionResolver,
     className: "table-fix",
     sortBy: sortBy,
@@ -334,9 +298,6 @@ TableToolbarView.defaultProps = {
     return null;
   },
   renderEmptyState: function renderEmptyState() {
-    return null;
-  },
-  onSort: function onSort() {
     return null;
   },
   filterConfig: []
