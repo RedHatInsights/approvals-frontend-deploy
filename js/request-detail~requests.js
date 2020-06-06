@@ -269,8 +269,8 @@ var createRequestAction = function createRequestAction(requestId, actionIn) {
 /*!**********************************************!*\
   !*** ./src/redux/actions/request-actions.js ***!
   \**********************************************/
-/*! exports provided: fetchRequests, fetchRequest, fetchRequestContent, createRequestAction, expandRequest, sortRequests, setFilterValueRequests, clearFilterValueRequests */
-/*! exports used: clearFilterValueRequests, createRequestAction, expandRequest, fetchRequest, fetchRequestContent, fetchRequests, setFilterValueRequests, sortRequests */
+/*! exports provided: fetchRequests, fetchRequest, fetchRequestContent, createRequestAction, expandRequest, sortRequests, setFilterValueRequests, clearFilterValueRequests, resetRequestList */
+/*! exports used: clearFilterValueRequests, createRequestAction, expandRequest, fetchRequest, fetchRequestContent, fetchRequests, resetRequestList, setFilterValueRequests, sortRequests */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -279,9 +279,10 @@ var createRequestAction = function createRequestAction(requestId, actionIn) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return fetchRequestContent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return createRequestAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return expandRequest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return sortRequests; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return setFilterValueRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return sortRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return setFilterValueRequests; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return clearFilterValueRequests; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return resetRequestList; });
 /* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/redux/action-types.js");
 /* harmony import */ var _helpers_request_request_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../helpers/request/request-helper */ "./src/helpers/request/request-helper.js");
 /* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
@@ -352,13 +353,13 @@ var expandRequest = function expandRequest(id) {
 };
 var sortRequests = function sortRequests(sortBy) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SORT_REQUESTS */ "q"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SORT_REQUESTS */ "r"],
     payload: sortBy
   };
 };
 var setFilterValueRequests = function setFilterValueRequests(filterValue, type) {
   return {
-    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SET_FILTER_REQUESTS */ "o"],
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* SET_FILTER_REQUESTS */ "p"],
     payload: {
       filterValue: filterValue,
       type: type
@@ -368,6 +369,11 @@ var setFilterValueRequests = function setFilterValueRequests(filterValue, type) 
 var clearFilterValueRequests = function clearFilterValueRequests() {
   return {
     type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* CLEAR_FILTER_REQUESTS */ "b"]
+  };
+};
+var resetRequestList = function resetRequestList() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__[/* RESET_REQUEST_LIST */ "o"]
   };
 };
 
