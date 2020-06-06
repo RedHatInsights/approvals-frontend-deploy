@@ -1,40 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["request-detail~requests"],{
 
-/***/ "./src/constants/routes.js":
-/*!*********************************!*\
-  !*** ./src/constants/routes.js ***!
-  \*********************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var routes = {
-  requests: {
-    index: '/requests',
-    addComment: '/requests/add-comment',
-    approve: '/requests/approve',
-    deny: '/requests/deny'
-  },
-  request: {
-    index: '/request',
-    addComment: '/request/add-comment',
-    approve: '/request/approve',
-    deny: '/request/deny'
-  },
-  workflows: {
-    index: '/workflows',
-    add: '/workflows/add-workflow',
-    remove: '/workflows/remove',
-    editInfo: '/workflows/edit-info',
-    editGroups: '/workflows/edit-groups',
-    editSequence: '/workflows/edit-sequence'
-  }
-};
-/* harmony default export */ __webpack_exports__["a"] = (routes);
-
-/***/ }),
-
 /***/ "./src/forms/request-comment-form.schema.js":
 /*!**************************************************!*\
   !*** ./src/forms/request-comment-form.schema.js ***!
@@ -282,7 +247,7 @@ function _fetchRequestWithSubrequests() {
             }
 
           case 17:
-            return _context.abrupt("return", _objectSpread({}, requestData[0]));
+            return _context.abrupt("return", requestData[0]);
 
           case 18:
           case "end":
@@ -294,33 +259,9 @@ function _fetchRequestWithSubrequests() {
   return _fetchRequestWithSubrequests.apply(this, arguments);
 }
 
-function createRequestAction(_x3, _x4) {
-  return _createRequestAction.apply(this, arguments);
-}
-
-function _createRequestAction() {
-  _createRequestAction = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(requestId, actionIn) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return actionApi.createAction(requestId, actionIn);
-
-          case 2:
-            return _context2.abrupt("return", _context2.sent);
-
-          case 3:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _createRequestAction.apply(this, arguments);
-}
+var createRequestAction = function createRequestAction(requestId, actionIn) {
+  return actionApi.createAction(requestId, actionIn);
+};
 
 /***/ }),
 
@@ -622,11 +563,11 @@ ActionModal.propTypes = {
   addNotification: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,
   createRequestAction: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,
   postMethod: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-  id: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
   actionType: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  closeUrl: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  match: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  location: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  closeUrl: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
+    patname: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+    search: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string
+  })])
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {

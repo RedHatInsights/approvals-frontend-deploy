@@ -1,11 +1,11 @@
 {
   "app_name": "approval",
-  "src_hash": "cc3aa2a665600c7d7911af5dbfadbcbe64ab594c",
+  "src_hash": "b35261f8ef822fffd4f9a14aaa394c68964cb491",
   "src_tag": "",
   "src_branch": "qa-stable",
   "travis": {
     "event_type": "push",
-    "build_number": "1369",
-    "build_web_url": "https://travis-ci.org/RedHatInsights/approval-ui/builds/691436121"
+    "build_number": "1424",
+    "build_web_url": "https://travis-ci.org/RedHatInsights/approval-ui/builds/695505814"
   }
 }
