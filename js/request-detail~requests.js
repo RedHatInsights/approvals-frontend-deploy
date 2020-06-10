@@ -478,8 +478,8 @@ FormRenderer.defaultProps = {
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var _patternfly_react_core_dist_js_components_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Modal/Modal.js */ "./node_modules/@patternfly/react-core/dist/js/components/Modal/Modal.js");
 /* harmony import */ var _patternfly_react_core_dist_js_components_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components-notifications */ "./node_modules/@redhat-cloud-services/frontend-components-notifications/index.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _redhat_cloud_services_frontend_components_notifications_dist_cjs_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components-notifications/dist/cjs/actions */ "./node_modules/@redhat-cloud-services/frontend-components-notifications/dist/cjs/actions.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_notifications_dist_cjs_actions__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_notifications_dist_cjs_actions__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _redux_actions_request_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../redux/actions/request-actions */ "./src/redux/actions/request-actions.js");
 /* harmony import */ var _forms_request_comment_form_schema__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../forms/request-comment-form.schema */ "./src/forms/request-comment-form.schema.js");
 /* harmony import */ var _utilities_use_query__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utilities/use-query */ "./src/utilities/use-query.js");
@@ -511,7 +511,7 @@ var ActionModal = function ActionModal(_ref) {
       closeUrl = _ref.closeUrl,
       postMethod = _ref.postMethod;
 
-  var _useHistory = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["useHistory"])(),
+  var _useHistory = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__[/* useHistory */ "g"])(),
       push = _useHistory.push;
 
   var _useQuery = Object(_utilities_use_query__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"])(['request']),
@@ -578,7 +578,7 @@ ActionModal.propTypes = {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return Object(redux__WEBPACK_IMPORTED_MODULE_7__[/* bindActionCreators */ "a"])({
-    addNotification: _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_9__["addNotification"],
+    addNotification: _redhat_cloud_services_frontend_components_notifications_dist_cjs_actions__WEBPACK_IMPORTED_MODULE_9__["addNotification"],
     createRequestAction: _redux_actions_request_actions__WEBPACK_IMPORTED_MODULE_10__[/* createRequestAction */ "b"]
   }, dispatch);
 };
@@ -712,7 +712,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 var useQuery = function useQuery() {
   var requiredParams = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-  var _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useLocation"])(),
+  var _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* useLocation */ "h"])(),
       search = _useLocation.search;
 
   var query = new URLSearchParams(search);

@@ -25,8 +25,8 @@
 /* harmony import */ var _patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @patternfly/react-core/dist/js/components/Text/TextContent.js */ "./node_modules/@patternfly/react-core/dist/js/components/Text/TextContent.js");
 /* harmony import */ var _patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_patternfly_react_core_dist_js_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components */ "./node_modules/@redhat-cloud-services/frontend-components/index.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_EmptyTable__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/cjs/EmptyTable */ "./node_modules/@redhat-cloud-services/frontend-components/components/cjs/EmptyTable.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_EmptyTable__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_cjs_EmptyTable__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -44,7 +44,7 @@ var TableEmptyState = function TableEmptyState(_ref) {
       description = _ref.description,
       PrimaryAction = _ref.PrimaryAction,
       renderDescription = _ref.renderDescription;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components__WEBPACK_IMPORTED_MODULE_8__["EmptyTable"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_redhat_cloud_services_frontend_components_components_cjs_EmptyTable__WEBPACK_IMPORTED_MODULE_8__["EmptyTable"], {
     centered: true,
     "aria-label": "No records"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patternfly_react_core_dist_js_components_EmptyState_EmptyState_js__WEBPACK_IMPORTED_MODULE_2__["EmptyState"], {
@@ -93,10 +93,10 @@ TableEmptyState.propTypes = {
 /* harmony import */ var _helpers_shared_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../helpers/shared/pagination */ "./src/helpers/shared/pagination.js");
 /* harmony import */ var _loader_placeholders__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./loader-placeholders */ "./src/presentational-components/shared/loader-placeholders.js");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/Section */ "./node_modules/@redhat-cloud-services/frontend-components/components/Section.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/PrimaryToolbar */ "./node_modules/@redhat-cloud-services/frontend-components/components/PrimaryToolbar.js");
-/* harmony import */ var _redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_Section__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/cjs/Section */ "./node_modules/@redhat-cloud-services/frontend-components/components/cjs/Section.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_Section__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_cjs_Section__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components/components/cjs/PrimaryToolbar */ "./node_modules/@redhat-cloud-services/frontend-components/components/cjs/PrimaryToolbar.js");
+/* harmony import */ var _redhat_cloud_services_frontend_components_components_cjs_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_redhat_cloud_services_frontend_components_components_cjs_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -200,7 +200,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
   };
 
   var renderToolbar = function renderToolbar() {
-    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_cjs_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
       className: "pf-u-p-lg ins__approval__primary_toolbar",
       pagination: paginationConfig
     }, toolbarButtons && {
@@ -239,7 +239,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     }));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_Section__WEBPACK_IMPORTED_MODULE_10__["Section"], {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_cjs_Section__WEBPACK_IMPORTED_MODULE_10__["Section"], {
     type: "content",
     "page-type": "tab-".concat(titlePlural),
     id: "tab-".concat(titlePlural)
@@ -253,7 +253,7 @@ var TableToolbarView = function TableToolbarView(_ref) {
     className: "table-fix",
     sortBy: sortBy,
     onSort: onSort
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableHeader"], null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_patternfly_react_table__WEBPACK_IMPORTED_MODULE_6__["TableBody"], null)), pagination.count > 0 && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_redhat_cloud_services_frontend_components_components_cjs_PrimaryToolbar__WEBPACK_IMPORTED_MODULE_11__["PrimaryToolbar"], {
     className: "pf-u-pl-lg pf-u-pr-lg ins__approval__primary_toolbar",
     pagination: _objectSpread({}, paginationConfig, {
       dropDirection: 'up',
@@ -345,9 +345,9 @@ var approvalTabItems = [{
 var AppTabs = function AppTabs(_ref) {
   var _ref$tabItems = _ref.tabItems,
       tabItems = _ref$tabItems === void 0 ? approvalTabItems : _ref$tabItems;
-  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useHistory"])();
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__[/* useHistory */ "g"])();
 
-  var _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useLocation"])(),
+  var _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__[/* useLocation */ "h"])(),
       pathname = _useLocation.pathname,
       search = _useLocation.search;
 
