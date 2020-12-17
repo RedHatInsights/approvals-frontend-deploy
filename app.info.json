@@ -1,12 +1,12 @@
 {
   "app_name": "approval",
-  "src_hash": "77c8bab022b424b3974f8691290c5d592993cb68",
+  "src_hash": "e50585d7a16be90fd344e3284dd9821d2dda04cc",
   "src_tag": "",
   "src_branch": "master",
-  "patternfly_dependencies": ["@patternfly/react-core@4.79.2","@patternfly/react-icons@4.7.22","@patternfly/react-table@4.19.24"],
+  "patternfly_dependencies": ["@patternfly/react-core@4.84.4","@patternfly/react-icons@4.7.22","@patternfly/react-table@4.19.24"],
   "travis": {
     "event_type": "push",
-    "build_number": "2050",
-    "build_web_url": "https://travis-ci.com/RedHatInsights/approval-ui/builds/209289697"
+    "build_number": "2055",
+    "build_web_url": "https://travis-ci.com/RedHatInsights/approval-ui/builds/209315021"
   }
 }
