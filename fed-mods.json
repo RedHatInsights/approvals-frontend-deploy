@@ -1,0 +1,10 @@
+{
+    "approval": {
+        "entry": [
+            "/beta/apps/approval/approval.js"
+        ],
+        "modules": [
+            "/beta/apps/approval/js/412.js"
+        ]
+    }
+}
