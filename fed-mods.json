@@ -4,7 +4,8 @@
             "/beta/apps/approval/approval.js"
         ],
         "modules": [
-            "/beta/apps/approval/js/412.js"
+            "/beta/apps/approval/js/588.js",
+            "/beta/apps/approval/css/588.3c2a37ae4b86024f8029.css"
         ]
     }
 }
