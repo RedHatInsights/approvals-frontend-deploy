@@ -1,13 +1,13 @@
 {
   "app_name": "approval",
-  "src_hash": "fc881f880385a3f20f812df4250edb10c3d7fa77",
+  "src_hash": "af1501b1781c2546c99aba884d4b1e15bbe1f99f",
   "src_tag": "",
   "src_branch": "main",
   "patternfly_dependencies": ["@patternfly/patternfly@4.159.1","@patternfly/react-core@4.175.4","@patternfly/react-icons@4.19.8","@patternfly/react-table@4.44.4"],
-  "rh_cloud_services_dependencies": ["@redhat-cloud-services/approval-client@1.0.94","@redhat-cloud-services/frontend-components@3.5.1","@redhat-cloud-services/frontend-components-config@4.5.4","@redhat-cloud-services/frontend-components-notifications@3.2.5","@redhat-cloud-services/frontend-components-utilities@3.2.3","@redhat-cloud-services/rbac-client@1.0.94"],
+  "rh_cloud_services_dependencies": ["@redhat-cloud-services/approval-client@1.0.94","@redhat-cloud-services/frontend-components@3.5.1","@redhat-cloud-services/frontend-components-config@4.5.6","@redhat-cloud-services/frontend-components-notifications@3.2.5","@redhat-cloud-services/frontend-components-utilities@3.2.3","@redhat-cloud-services/rbac-client@1.0.94"],
   "travis": {
     "event_type": "push",
-    "build_number": "2865",
-    "build_web_url": "https://app.travis-ci.com/RedHatInsights/approval-ui/builds/242650604"
+    "build_number": "2873",
+    "build_web_url": "https://app.travis-ci.com/RedHatInsights/approval-ui/builds/242753935"
   }
 }
